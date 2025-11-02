@@ -18,11 +18,12 @@ workflows:
 
 - run:
     name: Plan a deploy
+    # TODO: Set the correct values for environment, component, and version before deploying.
     command: |
       circleci run release plan \
-        --environment-name="<environment-name>" \
-        --component-name="<component-name>" \
-        --target-version="<some-version-name>"
+        --environment-name="production" \
+        --component-name="web-app" \
+        --target-version="v1.2.3"
 # Your job here doing the actual deployment
 - run:
     name: Update a deploy to SUCCESS
