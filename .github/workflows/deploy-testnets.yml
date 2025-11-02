@@ -2,7 +2,6 @@ name: Deploy testnets
 on:
   push:
     branches:
-            - master
             - main
             - dev
 permissions:
@@ -10,7 +9,7 @@ permissions:
 
 concurrency:
   group: deploy-testnets-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   discover-matrix:
@@ -156,7 +155,6 @@ jobs:
           name: catapult-outputs-${{ matrix.networkName }}-${{ matrix.chainId }}
           path: outputs/**
           if-no-files-found: ignore
-
 
   dry-run:
     name: Catapult dry-run
