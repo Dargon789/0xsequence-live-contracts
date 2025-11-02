@@ -1,0 +1,35 @@
+version: 2.1
+
+jobs:
+  say-hello:
+   docker:
+      - image: cimg/base:current
+      
+    steps:
+      - checkout
+      - run:
+          name: "Say hello"
+          command: "echo Hello, World!"
+          
+workflows:
+  say-hello-workflow: 
+    jobs:
+      - say-hello
+
+- run:
+    name: Plan a deploy
+    # TODO: Set the correct values for environment, component, and version before deploying.
+    command: |
+      circleci run release plan \
+        --environment-name="production" \
+        --component-name="web-app" \
+        --target-version="v1.2.3"
+# Your job here doing the actual deployment
+- run:
+    name: Update a deploy to SUCCESS
+    command: circleci run release update --status=SUCCESS 
+    when: on_success 
+- run:
+    name: Update planned deploy to FAILED
+    command: circleci run release update --status=FAILED 
+    when: on_fail
