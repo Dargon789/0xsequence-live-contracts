@@ -186,6 +186,7 @@
   rpcUrl: "https://nodes.sequence.app/amoy/{{RPC_BUILDER_KEY}}"
   supports:
     - sourcify
+    - etherscan_v2
   testnet: true
 
 - name: Blast
@@ -203,6 +204,13 @@
 - name: Etherlink Testnet
   chainId: 128123
   rpcUrl: "https://nodes.sequence.app/etherlink-testnet/{{RPC_BUILDER_KEY}}"
+  supports:
+    - sourcify
+  testnet: true
+
+- name: Etherlink Shadownet Testnet
+  chainId: 127823
+  rpcUrl: "https://nodes.sequence.app/etherlink-shadownet-testnet/{{RPC_BUILDER_KEY}}"
   supports:
     - sourcify
   testnet: true
@@ -274,6 +282,10 @@
   chainId: 28802
   rpcUrl: "https://nodes.sequence.app/incentiv-testnet-v2/{{RPC_BUILDER_KEY}}"
   testnet: true
+
+- name: Incentiv
+  chainId: 24101
+  rpcUrl: "https://nodes.sequence.app/incentiv/{{RPC_BUILDER_KEY}}"
 
 - name: SEI Testnet
   chainId: 1328
