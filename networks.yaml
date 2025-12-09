@@ -51,6 +51,12 @@
     - etherscan_v2
     - sourcify
 
+- name: "HyperEVM"
+  chainId: 999
+  rpcUrl: "https://nodes.sequence.app/hyperevm/{{RPC_BUILDER_KEY}}"
+  supports:
+    - etherscan_v2
+
 - name: Polygon zkEVM
   chainId: 1101
   rpcUrl: "https://nodes.sequence.app/polygon-zkevm/{{RPC_BUILDER_KEY}}"
@@ -286,15 +292,6 @@
 - name: Incentiv
   chainId: 24101
   rpcUrl: "https://nodes.sequence.app/incentiv/{{RPC_BUILDER_KEY}}"
-
-- name: SEI Testnet
-  chainId: 1328
-  rpcUrl: "https://nodes.sequence.app/sei-testnet/{{RPC_BUILDER_KEY}}"
-  testnet: true
-
-- name: SEI
-  chainId: 1329
-  rpcUrl: "https://nodes.sequence.app/sei/{{RPC_BUILDER_KEY}}"
 
 - name: Katana
   chainId: 747474
