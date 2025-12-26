@@ -6,7 +6,16 @@ The CI loads all networks defined in `networks.yaml` and generates a matrix of j
 
 The CI uses the address `0x000000cCD1D384484d4f4AeE9CC47527Dc03e265` to send the transactions. It must be funded on all networks; if this address does not have funds on one of the networks, that network will fail to perform any deployments. The CI also depends on Sequence nodes; their status can be found on [Sequence's supported chains](https://status.sequence.info).
 
+## 🚀 Deploy CI
+
 [![Deploy CI](https://github.com/0xsequence/live-contracts/actions/workflows/deploy.yml/badge.svg)](https://github.com/0xsequence/live-contracts/actions/workflows/deploy.yml)
+
+Contracts are deployed using the Foundry toolchain:
+
+- ✅ Selector-clear deploy via `forge script`
+- ✅ Replay-safe audit trail via `broadcast/`
+- ✅ Custom metadata encoded in transactions for tracking
+- ✅ CI workflow: `.github/workflows/deploy.yml`
 
 ## Usage
 
@@ -168,7 +177,6 @@ The following is a list of contracts that are deployed by this script.
 ├──────────────────────┼───────────────────────────────────┼────────────────────────────────────────────┤
 │ clawback             │ Clawback                          │ 0x6F9a2c3E11011b894fae691d5338748f8048467d │
 │ clawback             │ ClawbackMetadata                  │ 0x335411eAA9D63251f8c0867600Be4d0C190a3b1f │
-│ create4              │ Create4                           │ 0xC4C4C4Ae7EA494fdb246991b70c8E40f471c9166 │
 │ developer-multisig   │ DeveloperMultisig                 │ 0x007a47e6BF40C1e0ed5c01aE42fDC75879140bc4 │
 │ factories            │ Erc1155Factory                    │ 0x024b9949FeD1c8dd7154DE653456d64Aa1093384 │
 │ factories            │ Erc1155Holder                     │ 0x3883491F1433dafafd20FB8FD9ec1fE032Ca5e3B │
@@ -192,7 +200,6 @@ The following is a list of contracts that are deployed by this script.
 │ marketplace-v2       │ BatchPayableHelperV2              │ 0x6166c1952c54dEd6b070B4616797E61b6c48A117 │
 │ marketplace-v2       │ MarketFactoryV2                   │ 0xBDC76d15eA28beB6AF2Cc69b4EFBb4Aa4FB77689 │
 │ marketplace-v2       │ MarketV2                          │ 0xfdb42A198a932C8D3B506Ffa5e855bC4b348a712 │
-│ multicall3           │ Multicall3                        │ 0xae96419a81516f063744206d4b5E36f3168280f8 │
 │ niftyswap            │ Exchange20Wrapper                 │ 0x2c944F28965F9A2cd5E69bA7e7520CbbD928258a │
 │ niftyswap            │ Factory20                         │ 0x9196b852437D9Ed92d95715dCbdA4533ffC479E0 │
 │ p256-verifier        │ SoladyP256Verifier                │ 0x000000000000D01eA45F9eFD5c54f037Fa57Ea1a │
@@ -203,16 +210,16 @@ The following is a list of contracts that are deployed by this script.
 │ proxy-hook           │ WalletProxyHook                   │ 0x1f56dbAD5e8319F0DE9a323E24A31b5077dEB1a4 │
 │ SEQ-0001             │ SequenceMainModuleUpgradableDuoV1 │ 0x94Fb1E5196B4eE5A1c9ad737a505CE12bAe7Ca85 │
 │ SEQ-0001             │ SequenceMainModuleUpgradableDuoV2 │ 0x4f8ce847174b32cBe21b3887Be894e0DEBC28952 │
-│ sequence_v3/rc_5     │ Erc4337FactoryWrapperV3           │ 0x00000000000003c0C955C8AE06FB13cDd19a7ac6 │
-│ sequence_v3/rc_5     │ GuestV3                           │ 0x0000000000006Ac72ed1d192fa28f0058D3F8806 │
-│ sequence_v3/rc_5     │ PasskeysV3                        │ 0x0000000000005204F3711851EAD52CC9c241499a │
-│ sequence_v3/rc_5     │ RecoveryV3                        │ 0x000000000000AB36D17eB1150116371520565205 │
-│ sequence_v3/rc_5     │ SequenceV3/rc5FactoryV3           │ 0x00000000000018A77519fcCCa060c2537c9D6d3F │
-│ sequence_v3/rc_5     │ SessionsV3                        │ 0x00000000000030Bcc832F7d657f50D6Be35C92b3 │
-│ sequence_v3/rc_5     │ Stage1Module433707V3              │ 0x0000000000009caFdeDb6f64Bf5F31a22124B2a8 │
-│ sequence_v3/rc_5     │ Stage1ModuleV3                    │ 0x0000000000001f3C39d61698ab21131a12134454 │
-│ sequence_v3/rc_5     │ Stage2Module.valueV3              │ 0xD0ae8eF93b7DA4eabb32Ec4d81b7a501DCa04D4C │
-│ sequence_v3/rc_5     │ Stage2Module433707.valueV3        │ 0xcBca3328a731deffE6Ce4c2fb51b585c3c37FB92 │
+│ sequence_v3/rc_4     │ Erc4337FactoryWrapperV3           │ 0x00000000000003c0C955C8AE06FB13cDd19a7ac6 │
+│ sequence_v3/rc_4     │ GuestV3                           │ 0x0000000000601fcA38f0cCA649453F6739436d6C │
+│ sequence_v3/rc_4     │ PasskeysV3                        │ 0x0000000000dc2d96870dc108c5E15570B715DFD2 │
+│ sequence_v3/rc_4     │ RecoveryV3                        │ 0x0000000000213697bCA95E7373787a40858a51C7 │
+│ sequence_v3/rc_4     │ SequenceV3/rc4FactoryV3           │ 0x00000000000018A77519fcCCa060c2537c9D6d3F │
+│ sequence_v3/rc_4     │ SessionsV3                        │ 0x0000000000007b93614790a8222257b0b19f5712 │
+│ sequence_v3/rc_4     │ Stage1Module433707V3              │ 0x0000000000000379Bca7eb0a96fc539606745b73 │
+│ sequence_v3/rc_4     │ Stage1ModuleV3                    │ 0x00000000000077AD573937a9b09bB2b8212fC808 │
+│ sequence_v3/rc_4     │ Stage2Module.valueV3              │ 0x6B251E9bB67d1FD297137b8f901A6Fac7E802544 │
+│ sequence_v3/rc_4     │ Stage2Module433707.valueV3        │ 0xb7d5B9402f0051bb6053af182b4Ae242EC280ef3 │
 │ sequence-v1          │ GuestModuleV1                     │ 0x02390F3E6E5FD1C6786CB78FD3027C117a9955A7 │
 │ sequence-v1          │ MainModuleUpgradeableV1           │ 0x7EFE6cE415956c5f80C6530cC6cc81b4808F6118 │
 │ sequence-v1          │ MainModuleV1                      │ 0xd01F11855bCcb95f88D7A48492F66410d4637313 │
@@ -241,13 +248,6 @@ The following is a list of contracts that are deployed by this script.
 │ trails-rc-2          │ TrailsIntentEntrypoint            │ 0x9470D883bac170116d397Db3dA71B2e57d567583 │
 │ trails-rc-2          │ TrailsRouter                      │ 0xc4415c5CabD726bA06042af752a528B3dbc263F7 │
 │ trails-rc-2          │ TrailsRouterShim                  │ 0x859E606022aE8894342c00D297A4c4332aE53AbB │
-│ trails-rc-3          │ TrailsIntentEntrypoint            │ 0x8f64eEB1f4680B9ed1F9d6A6Eee7CCf36258C93D │
-│ trails-rc-3          │ TrailsRouter                      │ 0xF8A739B9F24E297a98b7aba7A9cdFDBD457F6fF8 │
-│ trails-rc-3          │ TrailsRouterShim                  │ 0x1306aF05bA556839885B9B8c758f1d2F33d3571E │
-│ trails-rc-4          │ TrailsIntentEntrypoint            │ 0x91E9e3Fe369CF005dB2857Ef24955A66d1E692Cf │
-│ trails-rc-4          │ TrailsRouter                      │ 0xF8A739B9F24E297a98b7aba7A9cdFDBD457F6fF8 │
-│ trails-rc-4          │ TrailsRouterShim                  │ 0x1306aF05bA556839885B9B8c758f1d2F33d3571E │
-│ trails-rc-4          │ TrailsValidator                   │ 0x4B3eC67c5812543924C12a07140369C29077071e │
 │ trails-token-sweeper │ TrailsMulticall3Router            │ 0xFF8f46538c39dCA637fCE9a804b2B59B517A9698 │
 │ trails-token-sweeper │ TrailsTokenSweeper                │ 0xEbDd59B8cE1993d38e4E081E0d80662BB169d3db │
 │ value-forwarder      │ ValueForwarder                    │ 0xABAAd93EeE2a569cF0632f39B10A9f5D734777ca │
