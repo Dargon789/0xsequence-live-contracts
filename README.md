@@ -8,6 +8,8 @@ The CI uses the address `0x000000cCD1D384484d4f4AeE9CC47527Dc03e265` to send the
 
 ## 🚀 Deploy CI
 
+[![Deploy CI](https://github.com/0xsequence/live-contracts/actions/workflows/deploy.yml/badge.svg)](https://github.com/0xsequence/live-contracts/actions/workflows/deploy.yml)
+
 Contracts are deployed using the Foundry toolchain:
 
 - ✅ Selector-clear deploy via `forge script`
