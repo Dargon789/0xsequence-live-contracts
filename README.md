@@ -12,7 +12,7 @@ The CI uses the address `0x000000cCD1D384484d4f4AeE9CC47527Dc03e265` to send the
 
 Contracts are deployed using the Foundry toolchain:
 
-- ✅ Selector-clear deploy via `forge script`
+- ✅ Selector-clear deployment via `forge script`
 - ✅ Replay-safe audit trail via `broadcast/`
 - ✅ Custom metadata encoded in transactions for tracking
 - ✅ CI workflow: `.github/workflows/deploy.yml`
