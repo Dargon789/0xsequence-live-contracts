@@ -1,6 +1,6 @@
 name: "sequence_v3/rc_4"
 version: "1"
-description: "Sequence v3 contracts (release candidate 3) (commit fa0fae3de26e189cf4f8a554b2d72f0a35297bc0) (evm paris)"
+description: "Sequence v3 contracts rc-4 job using rc-3 contract artifacts (commit fa0fae3de26e189cf4f8a554b2d72f0a35297bc0) (evm paris)"
 depends_on: ["p256-verifier"]
 
 
