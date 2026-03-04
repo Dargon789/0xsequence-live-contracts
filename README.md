@@ -170,6 +170,7 @@ The following is a list of contracts that are deployed by this script.
 │ clawback             │ ClawbackMetadata                  │ 0x335411eAA9D63251f8c0867600Be4d0C190a3b1f │
 │ create4              │ Create4                           │ 0xC4C4C4Ae7EA494fdb246991b70c8E40f471c9166 │
 │ developer-multisig   │ DeveloperMultisig                 │ 0x007a47e6BF40C1e0ed5c01aE42fDC75879140bc4 │
+│ eip-6492             │ Eip6492                           │ 0x0000000044dE9306b161ddE8D58682054e70c766 │
 │ factories            │ Erc1155Factory                    │ 0x024b9949FeD1c8dd7154DE653456d64Aa1093384 │
 │ factories            │ Erc1155Holder                     │ 0x3883491F1433dafafd20FB8FD9ec1fE032Ca5e3B │
 │ factories            │ Erc1155PackFactory                │ 0xC4F1ABB23d8CC6E2786fBe7374A1162C499E1701 │
@@ -227,20 +228,6 @@ The following is a list of contracts that are deployed by this script.
 │ stack-signers        │ PaymentSignerDev                  │ 0x498399DD85CAa29A42Af499f82b271f1629ba0D7 │
 │ stack-signers        │ PaymentSignerNext                 │ 0x51805F2d8719a833C28EAc68aE881B2Eb70c0330 │
 │ stack-signers        │ PaymentSignerProd                 │ 0x9061a36CDBD17fFe8115aD34c85F94b624f0Dc0F │
-│ trails-beta-2        │ TrailsBalanceInjector             │ 0x9eCA6CEf73799402a1afe4779f588f03034c5D0f │
-│ trails-beta-2        │ TrailsMulticall3Router            │ 0x748dD4d9da3fd46797FE55C0b54c329dDc06558D │
-│ trails-beta-2        │ TrailsTokenSweeper                │ 0x5CdC654bc149F72509442fa9c12762b269f34c23 │
-│ trails-beta-3        │ TrailsBalanceInjector             │ 0xAca1813C717954c6Dc4Cbf69192b3Ef5781149C0 │
-│ trails-beta-3        │ TrailsIntentEntrypoint            │ 0x597faD66a7f0f41bF8790888CE06da95d89a3C3d │
-│ trails-beta-3        │ TrailsMulticall3Router            │ 0x977C0d1BFb9071CB63c9C1Ad92D916589Ee38928 │
-│ trails-beta-3        │ TrailsRouterShim                  │ 0xC0866A65988cBAdd1BDfF27686aA3831CDd6a717 │
-│ trails-beta-3        │ TrailsTokenSweeper                │ 0x04dB23CDBCB7c99098aA51E3d0d6440eD3bA26CF │
-│ trails-rc-1          │ TrailsIntentEntrypoint            │ 0xf9dF60584Da03f8D83fF1Bed663465734B2221a7 │
-│ trails-rc-1          │ TrailsRouter                      │ 0x07abd6f71aE3EAD08b2B6D5d091eE24d32dc1Dfa │
-│ trails-rc-1          │ TrailsRouterShim                  │ 0xFc9ffCfaaD457d202CD9622C6D9788363BFA5f2f │
-│ trails-rc-2          │ TrailsIntentEntrypoint            │ 0x9470D883bac170116d397Db3dA71B2e57d567583 │
-│ trails-rc-2          │ TrailsRouter                      │ 0xc4415c5CabD726bA06042af752a528B3dbc263F7 │
-│ trails-rc-2          │ TrailsRouterShim                  │ 0x859E606022aE8894342c00D297A4c4332aE53AbB │
 │ trails-rc-3          │ TrailsIntentEntrypoint            │ 0x8f64eEB1f4680B9ed1F9d6A6Eee7CCf36258C93D │
 │ trails-rc-3          │ TrailsRouter                      │ 0xF8A739B9F24E297a98b7aba7A9cdFDBD457F6fF8 │
 │ trails-rc-3          │ TrailsRouterShim                  │ 0x1306aF05bA556839885B9B8c758f1d2F33d3571E │
@@ -248,8 +235,13 @@ The following is a list of contracts that are deployed by this script.
 │ trails-rc-4          │ TrailsRouter                      │ 0xF8A739B9F24E297a98b7aba7A9cdFDBD457F6fF8 │
 │ trails-rc-4          │ TrailsRouterShim                  │ 0x1306aF05bA556839885B9B8c758f1d2F33d3571E │
 │ trails-rc-4          │ TrailsValidator                   │ 0x4B3eC67c5812543924C12a07140369C29077071e │
+│ trails-rc-5          │ TrailsIntentEntrypoint            │ 0x91E9e3Fe369CF005dB2857Ef24955A66d1E692Cf │
+│ trails-rc-5          │ TrailsRouter                      │ 0xBaE357CBAA04a68cbfD5a560Ab06C4E9A3328A90 │
+│ trails-rc-5          │ TrailsRouterShim                  │ 0xde04013becF982866A04d928A6df25e0D1FAaA71 │
+│ trails-rc-5          │ TrailsValidator                   │ 0x4B3eC67c5812543924C12a07140369C29077071e │
 │ trails-token-sweeper │ TrailsMulticall3Router            │ 0xFF8f46538c39dCA637fCE9a804b2B59B517A9698 │
 │ trails-token-sweeper │ TrailsTokenSweeper                │ 0xEbDd59B8cE1993d38e4E081E0d80662BB169d3db │
+│ trails-utils-1       │ TrailsUtils                       │ 0x000000004f702C8398e158108937814d074cD74b │
 │ value-forwarder      │ ValueForwarder                    │ 0xABAAd93EeE2a569cF0632f39B10A9f5D734777ca │
 │ waas-trust-factory   │ TrustFactory                      │ 0x4483FaA9dEEDd6D6FaCFee9c686f1E394A1280f9 │
 └──────────────────────┴───────────────────────────────────┴────────────────────────────────────────────┘

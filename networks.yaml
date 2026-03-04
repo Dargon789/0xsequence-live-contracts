@@ -17,11 +17,13 @@
   rpcUrl: "https://nodes.sequence.app/telos/{{RPC_BUILDER_KEY}}"
   supports:
     - sourcify
+  evmVersion: shanghai
 
 - name: Telos Testnet
   chainId: 41
   rpcUrl: "https://nodes.sequence.app/telos-testnet/{{RPC_BUILDER_KEY}}"
   testnet: true
+  evmVersion: shanghai
 
 - name: BNB Smart Chain
   chainId: 56
@@ -148,7 +150,6 @@
   rpcUrl: "https://nodes.sequence.app/arbitrum/{{RPC_BUILDER_KEY}}"
   supports:
     - etherscan_v2
-    - sourcify
 
 - name: Arbitrum Nova
   chainId: 42170
@@ -204,13 +205,6 @@
   rpcUrl: "https://nodes.sequence.app/base-sepolia/{{RPC_BUILDER_KEY}}"
   supports:
     - etherscan_v2
-    - sourcify
-  testnet: true
-
-- name: Etherlink Testnet
-  chainId: 128123
-  rpcUrl: "https://nodes.sequence.app/etherlink-testnet/{{RPC_BUILDER_KEY}}"
-  supports:
     - sourcify
   testnet: true
 
@@ -301,3 +295,11 @@
   chainId: 5042002
   rpcUrl: "https://nodes.sequence.app/arc-testnet/{{RPC_BUILDER_KEY}}"
   testnet: true
+
+- name: Sonic
+  chainId: 146
+  rpcUrl: "https://nodes.sequence.app/sonic/{{RPC_BUILDER_KEY}}"
+
+- name: Berachain
+  chainId: 80094
+  rpcUrl: "https://nodes.sequence.app/berachain/{{RPC_BUILDER_KEY}}"
