@@ -30,15 +30,17 @@ trap cleanup EXIT
 
 # Wait a moment for anvil to start
 echo "⏳ Waiting for Anvil to start..."
-sleep 3
-
-# Check if anvil is running
-if ! curl -s -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' http://localhost:8545 > /dev/null; then
-    echo "❌ Error: Anvil failed to start or is not responding"
+for i in {1..10}; do
+  if curl -s -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' http://localhost:8545 > /dev/null; then
+    echo "✅ Anvil is running"
+    break
+  fi
+  if [ $i -eq 10 ]; then
+    echo "❌ Error: Anvil failed to start or is not responding after 10 attempts"
     exit 1
-fi
-
-echo "✅ Anvil is running"
+  fi
+  sleep 1
+done
 
 echo "🧹 Cleaning output directory..."
 rm -rf output
