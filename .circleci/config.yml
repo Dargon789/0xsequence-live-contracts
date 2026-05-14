@@ -9,9 +9,18 @@ jobs:
       - run:
           name: Install submodules
           command: git submodule update --init --recursive
+      - restore_cache:
+          keys:
+            - v1-forge-{{ checksum "forge.toml" }}
+            - v1-forge-
       - run:
           name: Build
           command: forge build
+      - save_cache:
+          key: v1-forge-{{ checksum "forge.toml" }}
+          paths:
+            - ~/.foundry
+            - out
       - run:
           name: Test
           command: forge test -vvv
