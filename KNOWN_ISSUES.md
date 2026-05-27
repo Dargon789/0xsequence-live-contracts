@@ -11,6 +11,7 @@ The following issues are not actively looking to be resolved and have been skipp
 Affected deployments:
 
 * [factories](jobs/builder/factories_v3.yaml)
+* [trails-utils-1](jobs/trails/utils-1.yaml)
 
 Affected networks:
 
