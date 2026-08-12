@@ -234,6 +234,12 @@
   testnet: true
   evmVersion: shanghai
 
+- name: SKALE Base Testnet
+  chainId: 324705682
+  rpcUrl: "https://nodes.sequence.app/skale-base-testnet/{{RPC_BUILDER_KEY}}"
+  testnet: true
+  evmVersion: shanghai
+
 - name: SKALE Nebula
   chainId: 1482601649
   rpcUrl: "https://nodes.sequence.app/skale-nebula/{{RPC_BUILDER_KEY}}"
@@ -247,6 +253,10 @@
   chainId: 5042002
   rpcUrl: "https://nodes.sequence.app/arc-testnet/{{RPC_BUILDER_KEY}}"
   testnet: true
+
+- name: Arc
+  chainId: 5042
+  rpcUrl: "{{RPC_ARC_MAINNET}}"
 
 - name: Sonic
   chainId: 146
